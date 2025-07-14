@@ -1,0 +1,479 @@
+# 0 "/home/emina/zephyrproject/zephyr/misc/empty_file.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53/qemu_cortex_a53.dts" 1
+
+
+
+
+
+
+
+/dts-v1/;
+# 1 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 1 3 4
+# 16 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/dts/common/mem.h" 1 3 4
+# 17 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 2 3 4
+# 1 "/home/emina/zephyrproject/zephyr/dts/arm64/armv8-a.dtsi" 1 3 4
+
+
+
+
+
+
+# 1 "/home/emina/zephyrproject/zephyr/dts/common/skeleton.dtsi" 1 3 4
+# 9 "/home/emina/zephyrproject/zephyr/dts/common/skeleton.dtsi" 3 4
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+};
+# 8 "/home/emina/zephyrproject/zephyr/dts/arm64/armv8-a.dtsi" 2 3 4
+
+/ {
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  ranges;
+ };
+};
+# 18 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 2 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 1 3 4
+# 9 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
+# 19 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
+# 34 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
+# 18 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
+# 1083 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
+# 1084 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
+# 19 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 162 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
+# 163 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 193 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
+# 194 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
+# 197 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
+# 200 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 35 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
+# 20 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
+# 10 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 2 3 4
+# 19 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 2 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/pcie/pcie.h" 1 3 4
+# 20 "/home/emina/zephyrproject/zephyr/dts/arm64/qemu/qemu-virt-a53.dtsi" 2 3 4
+
+/ {
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a53";
+   reg = <0>;
+  };
+
+  cpu@1 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a53";
+   reg = <1>;
+  };
+ };
+
+ timer {
+  compatible = "arm,armv8-timer";
+  interrupt-parent = <&gic>;
+  interrupts = <0x1 13 (1UL << (1))
+         0xa0>,
+        <0x1 14 (1UL << (1))
+         0xa0>,
+        <0x1 11 (1UL << (1))
+         0xa0>,
+        <0x1 10 (1UL << (1))
+         0xa0>;
+ };
+
+ uartclk: apb-pclk {
+  compatible = "fixed-clock";
+  clock-frequency = <24000000>;
+  #clock-cells = <0>;
+ };
+
+ soc {
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+
+  interrupt-parent = <&gic>;
+
+  gic: interrupt-controller@8000000 {
+   compatible = "arm,gic-v3", "arm,gic";
+   reg = <0x00 0x8000000 0x00 0x010000>,
+         <0x00 0x80a0000 0x00 0xf60000>;
+   interrupt-controller;
+   #interrupt-cells = <4>;
+   status = "okay";
+   #size-cells = <0x02>;
+   #address-cells = <0x02>;
+
+   its: its@8080000 {
+    compatible = "arm,gic-v3-its";
+    reg = <0x00 0x8080000 0x00 0x20000>;
+    msi-controller;
+   };
+  };
+
+  uart0: uart@9000000 {
+   compatible = "arm,pl011";
+   reg = <0x00 0x9000000 0x00 0x1000>;
+   status = "disabled";
+   interrupts = <0x0 1 (1UL << (1)) 0>;
+   interrupt-names = "irq_0";
+   clocks = <&uartclk>;
+  };
+
+  flash0: flash@0 {
+   compatible = "cfi-flash";
+   bank-width = <4>;
+
+
+
+
+   reg = <0x0 0x0 0x0 (((64) * 1024) * 1024) >;
+  };
+
+  pcie: pcie@4010000000 {
+   compatible = "pci-host-ecam-generic";
+   device_type = "pci";
+   reg = <0x40 0x10000000 0x00 0x10000000>;
+   #size-cells = <0x02>;
+   #address-cells = <0x03>;
+   ranges = <0x1000000 0x00 0x00 0x00 0x3eff0000 0x00 0x10000
+      0x2000000 0x00 0x10000000 0x00 0x10000000 0x00 0x2eff0000
+      0x3000000 0x80 0x00 0x80 0x00 0x80 0x00>;
+   #interrupt-cells = <0x01>;
+   interrupt-map-mask = <0x1800 0x00 0x00 0x07>;
+   interrupt-map = <0x00 0x00 0x00 1 &gic 0 0 0x0
+      0x03 (1UL << (2)) 0xa0
+      0x00 0x00 0x00 2 &gic 0 0 0x0
+      0x04 (1UL << (2)) 0xa0
+      0x00 0x00 0x00 3 &gic 0 0 0x0
+      0x05 (1UL << (2)) 0xa0
+      0x00 0x00 0x00 4 &gic 0 0 0x0
+      0x06 (1UL << (2)) 0xa0
+
+      0x800 0x00 0x00 1 &gic 0 0 0x0
+      0x04 (1UL << (2)) 0xa0
+      0x800 0x00 0x00 2 &gic 0 0 0x0
+      0x05 (1UL << (2)) 0xa0
+      0x800 0x00 0x00 3 &gic 0 0 0x0
+      0x06 (1UL << (2)) 0xa0
+      0x800 0x00 0x00 4 &gic 0 0 0x0
+      0x03 (1UL << (2)) 0xa0
+
+      0x1000 0x00 0x00 1 &gic 0 0 0x0
+      0x05 (1UL << (2)) 0xa0
+      0x1000 0x00 0x00 2 &gic 0 0 0x0
+      0x06 (1UL << (2)) 0xa0
+      0x1000 0x00 0x00 3 &gic 0 0 0x0
+      0x03 (1UL << (2)) 0xa0
+      0x1000 0x00 0x00 4 &gic 0 0 0x0
+      0x04 (1UL << (2)) 0xa0
+
+      0x1800 0x00 0x00 1 &gic 0 0 0x0
+      0x06 (1UL << (2)) 0xa0
+      0x1800 0x00 0x00 2 &gic 0 0 0x0
+      0x03 (1UL << (2)) 0xa0
+      0x1800 0x00 0x00 3 &gic 0 0 0x0
+      0x04 (1UL << (2)) 0xa0
+      0x1800 0x00 0x00 4 &gic 0 0 0x0
+      0x05 (1UL << (2)) 0xa0>;
+   msi-parent = <&its>;
+   bus-range = <0x00 0xff>;
+  };
+ };
+};
+# 10 "/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53/qemu_cortex_a53.dts" 2
+
+/ {
+ model = "QEMU Cortex-A53";
+ compatible = "qemu,arm-cortex-a53";
+
+ psci {
+  compatible = "arm,psci-0.2";
+  method = "hvc";
+ };
+
+ chosen {
+  zephyr,sram = &sram0;
+  zephyr,console = &uart0;
+  zephyr,shell-uart = &uart0;
+  zephyr,flash = &flash0;
+  zephyr,pcie-controller = &pcie;
+ };
+
+ soc {
+  sram0: memory@40000000 {
+   compatible = "mmio-sram";
+   reg = <0x0 0x40000000 0x0 (((128) * 1024) * 1024)>;
+  };
+
+  virtio_mmio0: virtio_mmio@a000000 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000000 0x0 0x200>;
+   interrupts = <0x0 16 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio1: virtio_mmio@a000200 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000200 0x0 0x200>;
+   interrupts = <0x0 17 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio2: virtio_mmio@a000400 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000400 0x0 0x200>;
+   interrupts = <0x0 18 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio3: virtio_mmio@a000600 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000600 0x0 0x200>;
+   interrupts = <0x0 19 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio4: virtio_mmio@a000800 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000800 0x0 0x200>;
+   interrupts = <0x0 20 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio5: virtio_mmio@a000a00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000a00 0x0 0x200>;
+   interrupts = <0x0 21 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio6: virtio_mmio@a000c00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000c00 0x0 0x200>;
+   interrupts = <0x0 22 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio7: virtio_mmio@a000e00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa000e00 0x0 0x200>;
+   interrupts = <0x0 23 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio8: virtio_mmio@a001000 {
+   compatible = "virtio,mmio";
+   interrupts = <0x0 24 (1UL << (1)) 0xa0>;
+   reg = <0x0 0xa001000 0x0 0x200>;
+   status = "disabled";
+  };
+
+  virtio_mmio9: virtio_mmio@a001200 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001200 0x0 0x200>;
+   interrupts = <0x0 25 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio10: virtio_mmio@a001400 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001400 0x0 0x200>;
+   interrupts = <0x0 26 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio11: virtio_mmio@a001600 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001600 0x0 0x200>;
+   interrupts = <0x0 27 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio12: virtio_mmio@a001800 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001800 0x0 0x200>;
+   interrupts = <0x0 28 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio13: virtio_mmio@a001a00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001a00 0x0 0x200>;
+   interrupts = <0x0 29 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio14: virtio_mmio@a001c00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001c00 0x0 0x200>;
+   interrupts = <0x0 30 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio15: virtio_mmio@a001e00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa001e00 0x0 0x200>;
+   interrupts = <0x0 31 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio16: virtio_mmio@a002000 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002000 0x0 0x200>;
+   interrupts = <0x0 32 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio17: virtio_mmio@a002200 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002200 0x0 0x200>;
+   interrupts = <0x0 33 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio18: virtio_mmio@a002400 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002400 0x0 0x200>;
+   interrupts = <0x0 34 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio19: virtio_mmio@a002600 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002600 0x0 0x200>;
+   interrupts = <0x0 35 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio20: virtio_mmio@a002800 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002800 0x0 0x200>;
+   interrupts = <0x0 36 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio21: virtio_mmio@a002a00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002a00 0x0 0x200>;
+   interrupts = <0x0 37 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio22: virtio_mmio@a002c00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002c00 0x0 0x200>;
+   interrupts = <0x0 38 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio23: virtio_mmio@a002e00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa002e00 0x0 0x200>;
+   interrupts = <0x0 39 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio24: virtio_mmio@a003000 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003000 0x0 0x200>;
+   interrupts = <0x0 40 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio25: virtio_mmio@a003200 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003200 0x0 0x200>;
+   interrupts = <0x0 41 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio26: virtio_mmio@a003400 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003400 0x0 0x200>;
+   interrupts = <0x0 42 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio27: virtio_mmio@a003600 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003600 0x0 0x200>;
+   interrupts = <0x0 43 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio28: virtio_mmio@a003800 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003800 0x0 0x200>;
+   interrupts = <0x0 44 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio29: virtio_mmio@a003a00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003a00 0x0 0x200>;
+   interrupts = <0x0 45 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio30: virtio_mmio@a003c00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003c00 0x0 0x200>;
+   interrupts = <0x0 46 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+
+  virtio_mmio31: virtio_mmio@a003e00 {
+   compatible = "virtio,mmio";
+   reg = <0x0 0xa003e00 0x0 0x200>;
+   interrupts = <0x0 47 (1UL << (1)) 0xa0>;
+   status = "disabled";
+  };
+ };
+};
+
+&uart0 {
+ status = "okay";
+ current-speed = <115200>;
+};
+
+&pcie {
+ eth0: pcie@1,0 {
+  compatible = "intel,e1000";
+  vendor-id = <0x8086>;
+  device-id = <0x100e>;
+  interrupts = <1>;
+  interrupt-parent = <&pcie>;
+  reg = <0x0800 0 0 0 0>;
+  status = "okay";
+ };
+};
+# 0 "<command-line>" 2
+# 1 "/home/emina/zephyrproject/zephyr/misc/empty_file.c"

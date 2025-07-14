@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53/Kconfig.defconfig"

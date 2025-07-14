@@ -1,0 +1,220 @@
+# 0 "/home/emina/zephyrproject/zephyr/misc/empty_file.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b.dts" 1
+
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/emina/zephyrproject/zephyr/dts/arm64/broadcom/bcm2711.dtsi" 1 3 4
+
+
+
+
+
+
+# 1 "/home/emina/zephyrproject/zephyr/dts/common/mem.h" 1 3 4
+# 8 "/home/emina/zephyrproject/zephyr/dts/arm64/broadcom/bcm2711.dtsi" 2 3 4
+# 1 "/home/emina/zephyrproject/zephyr/dts/common/freq.h" 1 3 4
+# 9 "/home/emina/zephyrproject/zephyr/dts/arm64/broadcom/bcm2711.dtsi" 2 3 4
+
+# 1 "/home/emina/zephyrproject/zephyr/dts/arm64/armv8-a.dtsi" 1 3 4
+
+
+
+
+
+
+# 1 "/home/emina/zephyrproject/zephyr/dts/common/skeleton.dtsi" 1 3 4
+# 9 "/home/emina/zephyrproject/zephyr/dts/common/skeleton.dtsi" 3 4
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+};
+# 8 "/home/emina/zephyrproject/zephyr/dts/arm64/armv8-a.dtsi" 2 3 4
+
+/ {
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  ranges;
+ };
+};
+# 11 "/home/emina/zephyrproject/zephyr/dts/arm64/broadcom/bcm2711.dtsi" 2 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 1 3 4
+# 9 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
+# 19 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
+# 34 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
+# 18 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
+# 1083 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
+# 1084 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
+# 19 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 162 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
+# 163 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 193 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
+# 194 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
+# 197 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
+# 200 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 35 "/home/emina/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
+# 20 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
+# 10 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/interrupt-controller/arm-gic.h" 2 3 4
+# 12 "/home/emina/zephyrproject/zephyr/dts/arm64/broadcom/bcm2711.dtsi" 2 3 4
+
+/ {
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a72";
+   reg = <0>;
+  };
+ };
+
+ interrupt-parent = <&gic>;
+
+ timer {
+  compatible = "arm,armv8-timer";
+  interrupts = <0x1 13 (1UL << (1))
+         0xa0>,
+        <0x1 14 (1UL << (1))
+         0xa0>,
+        <0x1 11 (1UL << (1))
+         0xa0>,
+        <0x1 10 (1UL << (1))
+         0xa0>;
+ };
+
+ soc {
+  sram0: memory@200000 {
+   device_type = "memory";
+   compatible = "mmio-sram";
+   reg = <0x200000 0x80000>;
+  };
+
+  gic: interrupt-controller@ff841000 {
+   compatible = "arm,gic-v2", "arm,gic";
+   reg = <0xff841000 0x1000>,
+         <0xff842000 0x2000>;
+   interrupt-controller;
+   #interrupt-cells = <4>;
+   status = "okay";
+  };
+
+  gpio: gpio@fe200000 {
+   compatible = "simple-bus";
+   reg = <0xfe200000 0xf4>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+
+
+   gpio0: gpio@0 {
+    compatible = "brcm,bcm2711-gpio";
+    reg = <0>;
+    interrupts = <0x0 113 (1UL << (1))
+           0xa0>;
+    gpio-controller;
+    #gpio-cells = <2>;
+    ngpios = <28>;
+    status = "disabled";
+   };
+
+
+   gpio1: gpio@1c {
+    compatible = "brcm,bcm2711-gpio";
+    reg = <28>;
+    interrupts = <0x0 114 (1UL << (1))
+           0xa0>;
+    gpio-controller;
+    #gpio-cells = <2>;
+    ngpios = <18>;
+    status = "disabled";
+   };
+  };
+
+  uart1: uart@fe215040 {
+   compatible = "brcm,bcm2711-aux-uart";
+   reg = <0xfe215040 0x40>;
+   clock-frequency = <(((500) * 1000) * 1000)>;
+   interrupts = <0x0 93 (1UL << (1))
+          0xa0>;
+   status = "disabled";
+  };
+ };
+};
+# 10 "/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b.dts" 2
+# 1 "/home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
+# 11 "/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b.dts" 2
+
+/ {
+ model = "Raspberry Pi 4 Model B";
+ compatible = "raspberrypi,4-model-b", "brcm,bcm2838";
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ aliases {
+  led0 = &led_act;
+ };
+
+ chosen {
+  zephyr,console = &uart1;
+  zephyr,shell-uart = &uart1;
+  zephyr,sram = &sram0;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+
+  led_act: led-act {
+   gpios = <&gpio1 14 (0 << 0)>;
+   label = "ACT";
+  };
+ };
+};
+
+&gpio1 {
+ status = "okay";
+};
+
+&uart1 {
+ status = "okay";
+ current-speed = <115200>;
+};
+# 0 "<command-line>" 2
+# 1 "/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay" 1
+/ {
+    aliases {
+        led0 = &user_led;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        user_led: led_0 {
+            gpios = <&gpio0 17 (0 << 0)>;
+            label = "User LED";
+        };
+    };
+};
+# 0 "<command-line>" 2
+# 1 "/home/emina/zephyrproject/zephyr/misc/empty_file.c"

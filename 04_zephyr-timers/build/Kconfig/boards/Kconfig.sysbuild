@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/Kconfig.sysbuild"

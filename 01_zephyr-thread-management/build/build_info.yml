@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/emina/zephyr_rtos/01_zephyr-task-management'
+    source-dir: '/home/emina/zephyr_rtos/01_zephyr-task-management'
+  board:
+    name: 'qemu_cortex_a53'
+    path:
+     - '/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53'
+    qualifiers: 'qemu_cortex_a53'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/emina/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53/qemu_cortex_a53.dts'
+    include-dirs:
+     - '/home/emina/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/emina/zephyrproject/modules/hal/atmel/include'
+     - '/home/emina/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/emina/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/emina/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/emina/zephyrproject/modules/hal/microchip/include'
+     - '/home/emina/zephyrproject/modules/hal/microchip/dts'
+     - '/home/emina/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/emina/zephyrproject/modules/hal/nxp/dts'
+     - '/home/emina/zephyrproject/modules/hal/stm32/dts'
+     - '/home/emina/zephyrproject/modules/hal/ti/dts'
+     - '/home/emina/zephyrproject/zephyr/include'
+     - '/home/emina/zephyrproject/zephyr/include/zephyr'
+     - '/home/emina/zephyrproject/zephyr/dts/common'
+     - '/home/emina/zephyrproject/zephyr/dts/vendor'
+     - '/home/emina/zephyrproject/zephyr/dts/rx'
+     - '/home/emina/zephyrproject/zephyr/dts/x86'
+     - '/home/emina/zephyrproject/zephyr/dts/xtensa'
+     - '/home/emina/zephyrproject/zephyr/dts/sparc'
+     - '/home/emina/zephyrproject/zephyr/dts/riscv'
+     - '/home/emina/zephyrproject/zephyr/dts/posix'
+     - '/home/emina/zephyrproject/zephyr/dts/arm64'
+     - '/home/emina/zephyrproject/zephyr/dts/arm'
+     - '/home/emina/zephyrproject/zephyr/dts/arc'
+     - '/home/emina/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/emina/zephyrproject/zephyr/boards/qemu/cortex_a53/qemu_cortex_a53_defconfig'
+     - '/home/emina/zephyr_rtos/01_zephyr-task-management/prj.conf'
+    user-files:
+     - '/home/emina/zephyr_rtos/01_zephyr-task-management/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/emina/zephyr-sdk-0.17.1'
+  zephyr:
+    version: '4.1.99'
+    zephyr-base: '/home/emina/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/emina/zephyrproject/.venv-py312/bin/west build -b qemu_cortex_a53 .'
+  topdir: '/home/emina/zephyrproject'
+  version: '1.4.0'

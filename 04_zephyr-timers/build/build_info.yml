@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/emina/zephyr_rtos/04_zephyr-timers'
+    source-dir: '/home/emina/zephyr_rtos/04_zephyr-timers'
+  board:
+    name: 'rpi_4b'
+    path:
+     - '/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b'
+    qualifiers: 'bcm2711'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/emina/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b.dts'
+     - '/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay'
+    include-dirs:
+     - '/home/emina/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/emina/zephyrproject/modules/hal/atmel/include'
+     - '/home/emina/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/emina/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/emina/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/emina/zephyrproject/modules/hal/microchip/include'
+     - '/home/emina/zephyrproject/modules/hal/microchip/dts'
+     - '/home/emina/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/emina/zephyrproject/modules/hal/nxp/dts'
+     - '/home/emina/zephyrproject/modules/hal/stm32/dts'
+     - '/home/emina/zephyrproject/modules/hal/ti/dts'
+     - '/home/emina/zephyrproject/zephyr/include'
+     - '/home/emina/zephyrproject/zephyr/include/zephyr'
+     - '/home/emina/zephyrproject/zephyr/dts/common'
+     - '/home/emina/zephyrproject/zephyr/dts/vendor'
+     - '/home/emina/zephyrproject/zephyr/dts/rx'
+     - '/home/emina/zephyrproject/zephyr/dts/x86'
+     - '/home/emina/zephyrproject/zephyr/dts/xtensa'
+     - '/home/emina/zephyrproject/zephyr/dts/sparc'
+     - '/home/emina/zephyrproject/zephyr/dts/riscv'
+     - '/home/emina/zephyrproject/zephyr/dts/posix'
+     - '/home/emina/zephyrproject/zephyr/dts/arm64'
+     - '/home/emina/zephyrproject/zephyr/dts/arm'
+     - '/home/emina/zephyrproject/zephyr/dts/arc'
+     - '/home/emina/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay'
+  kconfig:
+    files:
+     - '/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b_defconfig'
+     - '/home/emina/zephyr_rtos/04_zephyr-timers/prj.conf'
+    user-files:
+     - '/home/emina/zephyr_rtos/04_zephyr-timers/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/emina/zephyr-sdk-0.17.1'
+  zephyr:
+    version: '4.1.99'
+    zephyr-base: '/home/emina/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/emina/zephyrproject/.venv-py312/bin/west build -p always -b rpi_4b .'
+  topdir: '/home/emina/zephyrproject'
+  version: '1.4.0'

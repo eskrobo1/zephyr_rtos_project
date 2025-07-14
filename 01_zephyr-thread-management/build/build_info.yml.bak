@@ -1,0 +1,5 @@
+west:
+  command: /home/emina/zephyrproject/.venv-py312/bin/west build -b qemu_cortex_a53
+    .
+  topdir: /home/emina/zephyrproject
+  version: 1.4.0
