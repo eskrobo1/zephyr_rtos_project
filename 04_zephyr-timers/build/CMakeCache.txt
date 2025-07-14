@@ -325,7 +325,7 @@ DTC:FILEPATH=/home/emina/zephyr-sdk-0.17.1/sysroots/x86_64-pokysdk-linux/usr/bin
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay
+DTC_OVERLAY_FILE:STRING=
 
 //Path to a program.
 GEN_KOBJECT_LIST:FILEPATH=/home/emina/zephyrproject/zephyr/scripts/build/gen_kobject_list.py

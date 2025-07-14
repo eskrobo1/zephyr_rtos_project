@@ -13,7 +13,6 @@ cmake:
      - '/home/emina/zephyrproject/zephyr/dts/bindings'
     files:
      - '/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b.dts'
-     - '/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay'
     include-dirs:
      - '/home/emina/zephyrproject/modules/hal/ambiq/dts'
      - '/home/emina/zephyrproject/modules/hal/atmel/include'
@@ -40,8 +39,6 @@ cmake:
      - '/home/emina/zephyrproject/zephyr/dts/arm'
      - '/home/emina/zephyrproject/zephyr/dts/arc'
      - '/home/emina/zephyrproject/zephyr/dts'
-    user-files:
-     - '/home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay'
   kconfig:
     files:
      - '/home/emina/zephyrproject/zephyr/boards/raspberrypi/rpi_4b/rpi_4b_defconfig'

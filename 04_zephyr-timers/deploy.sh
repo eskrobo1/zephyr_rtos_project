@@ -45,7 +45,7 @@ fi
 
 # Backup management
 BACKUP_DIR="/mnt/sdcard/backups"
-CURRENT_KERNEL="/mnt/sdcard/kernel8.img"
+CURRENT_KERNEL="$MOUNT_POINT/kernel8.img"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
 # Kreirajte backup direktorij ako ne postoji
@@ -95,7 +95,8 @@ done
 # Sync i unmount
 echo -e "\n${YELLOW}Syncing and unmounting...${NC}"
 sudo sync
-sudo umount /dev/mmcblk0p1
+udisksctl unmount -b /dev/mmcblk0p1
+udisksctl power-off -b /dev/mmcblk0
 
 # Dodatna sigurnost
 sudo eject /dev/mmcblk0 2>/dev/null || true

@@ -15,5 +15,4 @@ empty_file.o: /home/emina/zephyrproject/zephyr/misc/empty_file.c \
  /home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h \
  /home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h \
  /home/emina/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
- /home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
- /home/emina/zephyr_rtos/04_zephyr-timers/boards/rpi_4b.overlay
+ /home/emina/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h
