@@ -2,6 +2,7 @@
 
 Ovaj repozitorij sadrži praktične primjere implementacije osnovnih funkcionalnosti Zephyr RTOS-a na QEMU simulatoru i Raspberry Pi 4B platformi.
 
+<pre>
 ├── 01_zephyr-thread-management/     # Kreiranje i upravljanje nitima
 ├── 02_zephyr-thread-communication/  # Message queue i pipe komunikacija
 ├── 03_zephyr-thread-synchronization/ # Mutex i semafor mehanizmi
@@ -12,6 +13,8 @@ Ovaj repozitorij sadrži praktične primjere implementacije osnovnih funkcionaln
     ├── CMakeLists.txt
     ├── deploy.sh
     └── prj.conf
+</pre>
+
 
 ## Preduslovi
 
@@ -63,3 +66,6 @@ west build -t run
 cd ../04_zephyr-timers
 west build -p always -b rpi_4b .
 ./deploy.sh
+#Nakon izvršavanja deploy.sh skripte, SD kartica je pripremljena za korištenje na Raspberry Pi 4B
+#Za terminal komunikaciju pokrenuti
+picocom -b 115200 /dev/ttyUSB0
