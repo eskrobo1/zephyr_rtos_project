@@ -2,20 +2,6 @@
 
 Ovaj repozitorij sadrži praktične primjere implementacije osnovnih funkcionalnosti Zephyr RTOS-a na QEMU simulatoru i Raspberry Pi 4B platformi.
 
-## Struktura projekta
-├── 01_zephyr-thread-management/     # Kreiranje i upravljanje nitima
-├── 02_zephyr-thread-communication/  # Message queue i pipe komunikacija
-├── 03_zephyr-thread-synchronization/ # Mutex i semafor mehanizmi
-└── 04_zephyr-timers/                # Softverski timeri i GPIO kontrola
-│   ├── build/
-│   ├── src/
-│   │   └── main.c
-│   ├── CMakeLists.txt
-│   ├── deploy.sh
-│   └── prj.conf
-
-Struktura projekta
-
 ├── 01_zephyr-thread-management/     # Kreiranje i upravljanje nitima
 ├── 02_zephyr-thread-communication/  # Message queue i pipe komunikacija
 ├── 03_zephyr-thread-synchronization/ # Mutex i semafor mehanizmi
@@ -26,18 +12,6 @@ Struktura projekta
     ├── CMakeLists.txt
     ├── deploy.sh
     └── prj.conf
-
-zephyr-rtos-demo/
-├── 01_zephyr-thread-management/ # Kreiranje i upravljanje nitima
-├── 02_zephyr-thread-communication/ # Message queue i pipe komunikacija
-├── 03_zephyr-thread-synchronization/ # Mutex i semafor mehanizmi
-└──04_zephyr-timers/ # Softverski timeri i GPIO kontrola
-│  ├── build/ # (generira se prilikom build-a)
-│  ├── src/
-│  │ └── main.c 
-│  ├── CMakeLists.txt # CMake konfiguracija
-│  ├── deploy.sh # Skripta za deployment na SD karticu
-│  └── prj.conf # Konfiguracija projekta
 
 ## Preduslovi
 
