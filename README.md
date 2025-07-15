@@ -14,6 +14,18 @@ Ovaj repozitorij sadrži praktične primjere implementacije osnovnih funkcionaln
 │   ├── deploy.sh
 │   └── prj.conf
 
+zephyr-rtos-demo/
+├── 01_zephyr-thread-management/ # Kreiranje i upravljanje nitima
+├── 02_zephyr-thread-communication/ # Message queue i pipe komunikacija
+├── 03_zephyr-thread-synchronization/ # Mutex i semafor mehanizmi
+└──04_zephyr-timers/ # Softverski timeri i GPIO kontrola
+│  ├── build/ # (generira se prilikom build-a)
+│  ├── src/
+│  │ └── main.c 
+│  ├── CMakeLists.txt # CMake konfiguracija
+│  ├── deploy.sh # Skripta za deployment na SD karticu
+│  └── prj.conf # Konfiguracija projekta
+
 ## Preduslovi
 
 Prije pokretanja projekta, potrebno je imati instalirane sljedeće komponente:
